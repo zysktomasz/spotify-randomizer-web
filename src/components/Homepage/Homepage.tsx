@@ -1,57 +1,24 @@
 import React from 'react';
 import FluidContainer from '../common/FluidContainer';
-import { Box, Circle, Heading, Stack, Text } from '@chakra-ui/react';
+import { Heading, Stack } from '@chakra-ui/react';
+import HowToElement from './HowToElement';
+import { howToElementsData } from './howToElementsData';
 
 function Homepage(): JSX.Element {
+  const elements = howToElementsData.map((element, index) => {
+    const indexPlusOne = ++index;
+    return (
+      <HowToElement key={indexPlusOne} number={indexPlusOne} heading={element.heading} content={element.content} />
+    );
+  });
+
   return (
     <FluidContainer>
       <Stack spacing={1}>
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Box d="flex" alignItems="baseline">
-            <Circle size="40px" bg="green.300" color="white">
-              <Text fontSize={17}>1</Text>
-            </Circle>
-            <Stack ml={3} spacing={5}>
-              <Heading fontSize="xl">You login to SpotifyRandomizer through your Spotify account</Heading>
-              <Text width={800}>
-                You will be asked to allow SpotifyRandomizer certain permissions on your account. These are for: reading
-                your profile data, reading your playlists (public and private), modifying your playlists (in order to
-                reorder songs).
-              </Text>
-            </Stack>
-          </Box>
-        </Box>
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Box d="flex" alignItems="baseline">
-            <Circle size="40px" bg="green.300" color="white">
-              <Text fontSize={17}>2</Text>
-            </Circle>
-            <Stack ml={3} spacing={5}>
-              <Heading fontSize="xl">SpotifyRandomizer shows list of your playlists (public & private)</Heading>
-              <Text width={800}>Along with playlist image & added songs count.</Text>
-            </Stack>
-          </Box>
-        </Box>
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Box d="flex" alignItems="baseline">
-            <Circle size="40px" bg="green.300" color="white">
-              <Text fontSize={17}>3</Text>
-            </Circle>
-            <Stack ml={3} spacing={5}>
-              <Heading fontSize="xl">You choose one of your playlists and click "Randomize"</Heading>
-            </Stack>
-          </Box>
-        </Box>
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Box d="flex" alignItems="baseline">
-            <Circle size="40px" bg="green.300" color="white">
-              <Text fontSize={17}>4</Text>
-            </Circle>
-            <Stack ml={3} spacing={5}>
-              <Heading fontSize="xl">SpotifyRandomizer reorganizes songs in your playlist in random order</Heading>
-            </Stack>
-          </Box>
-        </Box>
+        <Heading size={'lg'} mb={5}>
+          How does SpotifyRandomizer work ?
+        </Heading>
+        {elements}
       </Stack>
     </FluidContainer>
   );
