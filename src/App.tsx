@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Flex } from '@chakra-ui/react';
+import Header from './components/header/Header';
+import Homepage from './components/Homepage/Homepage';
+import Footer from './components/footer/Footer';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex height="100%" direction="column">
+      <Header />
+      {/* todo: add routing and render different pages based on routes */}
+      <Box mt={{ base: 4, md: 12 }} flex="1 0 auto">
+        <Homepage />
+      </Box>
+      <Footer />
+    </Flex>
   );
 }
 
