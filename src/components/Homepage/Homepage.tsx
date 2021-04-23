@@ -4,7 +4,7 @@ import { Box, Circle, Heading, Stack, Text } from '@chakra-ui/react';
 
 function Homepage(): JSX.Element {
   return (
-    <FluidContainer mt={{ base: 4, md: 12 }} flex="1 0 auto">
+    <FluidContainer>
       <Stack spacing={1}>
         <Box p={5} shadow="md" borderWidth="1px">
           <Box d="flex" alignItems="baseline">
