@@ -1,8 +1,20 @@
 import jwtDecode, { JwtPayload } from 'jwt-decode';
+import { UserDetails } from '../redux/userSlice';
 
 const ISSUER = 'spotify-randomizer';
 
-export function isValidJwt(jwt: string): boolean {
+interface CustomJwtPayload {
+  iss?: string;
+  sub?: string;
+  displayName?: string;
+  accessToken?: string;
+}
+
+export function isValidJwt(jwt: string | undefined): boolean {
+  if (!jwt) {
+    return false;
+  }
+
   const decodedJwt = getDecodedJwt(jwt);
 
   if (!decodedJwt) {
@@ -13,18 +25,22 @@ export function isValidJwt(jwt: string): boolean {
   return decodedJwt.iss === ISSUER;
 }
 
-function getDecodedJwt(jwt: string): JwtPayload | null {
-  let decoded = null;
+export function getUserDataFromJwt(jwt: string): UserDetails | undefined {
+  const decodedJwt = getDecodedJwt(jwt);
 
-  if (!jwt) {
-    return decoded;
+  if (decodedJwt) {
+    return {
+      email: decodedJwt.sub,
+      displayName: decodedJwt.displayName,
+      accessToken: decodedJwt.accessToken,
+    };
   }
+}
 
+function getDecodedJwt(jwt: string): CustomJwtPayload | undefined {
   try {
-    decoded = jwtDecode<JwtPayload>(jwt);
+    return jwtDecode<JwtPayload>(jwt);
   } catch (e) {
     console.error('Unable to decode jwt', e);
   }
-
-  return decoded;
 }
