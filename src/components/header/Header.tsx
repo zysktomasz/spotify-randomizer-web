@@ -1,24 +1,17 @@
 import React from 'react';
-import { Box, Button, Flex, Heading, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Spacer } from '@chakra-ui/react';
 import FluidContainer from '../common/FluidContainer';
-import { BACKEND_LOGIN_URL } from '../../common/constants';
+import HeaderUserPanel from './HeaderUserPanel';
+import HeaderNavigationMenu from './HeaderNavigationMenu';
 
 function Header(): JSX.Element {
-  const redirectToAuth = () => window.location.replace(BACKEND_LOGIN_URL);
-
   return (
     <Box as="header" bg="gray.700" color="white">
       <FluidContainer py={5}>
-        <Flex justify="space-between" alignItems="center">
-          <Box>
-            <Heading size="md">SpotifyRandomizer</Heading>
-          </Box>
+        <Flex as="nav" justify="space-between" alignItems="center">
+          <HeaderNavigationMenu />
           <Spacer />
-          <Box>
-            <Button colorScheme="teal" onClick={redirectToAuth}>
-              Sign In with Spotify
-            </Button>
-          </Box>
+          <HeaderUserPanel />
         </Flex>
       </FluidContainer>
     </Box>
