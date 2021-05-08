@@ -29,7 +29,7 @@ function LoginHandler(): JSX.Element {
   });
 
   return isValidJwt(userStateJwt) ? (
-    <Redirect to={{ pathname: Routes.HOME }} />
+    <Redirect to={{ pathname: Routes.PLAYLISTS }} />
   ) : (
     <Center>
       <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
