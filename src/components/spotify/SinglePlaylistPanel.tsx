@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Image, Text, Link, Button, ButtonGroup, Badge } from '@chakra-ui/react';
+import { Box, Image, Text, Link, Button, ButtonGroup, Badge, Tooltip } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 interface SinglePlaylistPanelProps {
   playlist: Playlist;
@@ -23,8 +24,19 @@ function SinglePlaylistPanel(props: SinglePlaylistPanelProps): JSX.Element {
         >
           {playlist.isPublic ? 'public' : 'private'}
         </Badge>
-        <Link mt={1} display="block" fontSize="lg" lineHeight="normal" fontWeight="semibold" href="#">
+        <Link
+          mt={1}
+          display="block"
+          fontSize="lg"
+          lineHeight="normal"
+          fontWeight="semibold"
+          href={playlist.webPlayerUrl}
+          isExternal
+        >
           {playlist.name}
+          <Tooltip label="Click to be redirected to playlist on Spotify web player" placement="right-start">
+            <ExternalLinkIcon mx="3px" w={3} h={3} />
+          </Tooltip>
         </Link>
         <Text mt={2} color="gray.500">
           Songs: {playlist.tracksCount}

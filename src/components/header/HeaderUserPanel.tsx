@@ -24,7 +24,7 @@ function HeaderUserPanel(): JSX.Element {
     <Box>
       {isLoggedIn && (
         <HStack>
-          <h1>Hello, {userDetails.displayName}</h1>
+          <h1>Hello {userDetails.displayName}</h1>
           <Button colorScheme="teal" onClick={signOut}>
             Sign Out
           </Button>
