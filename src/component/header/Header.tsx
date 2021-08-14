@@ -30,7 +30,9 @@ export default function Header(): JSX.Element {
 
   return (
     <header>
-      <AppBar className={classes.appbarHeader}>{displayDesktop()}</AppBar>
+      <AppBar position="static" className={classes.appbarHeader}>
+        {displayDesktop()}
+      </AppBar>
     </header>
   );
 }
