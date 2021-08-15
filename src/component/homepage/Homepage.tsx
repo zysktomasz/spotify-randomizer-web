@@ -14,7 +14,7 @@ function Homepage(): JSX.Element {
   const classes = useStyles();
 
   const elements = howToElementsData.map((element: HowToElement) => {
-    return <HowToElementCard element={element} />;
+    return <HowToElementCard key={element.id} element={element} />;
   });
 
   return (
