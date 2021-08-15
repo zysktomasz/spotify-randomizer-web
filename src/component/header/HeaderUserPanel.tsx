@@ -14,12 +14,7 @@ function HeaderUserPanel(): JSX.Element {
   return (
     <Box>
       {isLoggedIn && (
-        <Box
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
+        <Box className="boxFlexElements">
           <Typography variant="h6" component="h3">
             Hello, {userDetails.displayName}
           </Typography>
