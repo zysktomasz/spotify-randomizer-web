@@ -1,5 +1,3 @@
-import { HowToElement } from './HowToElementCard';
-
 const howToElementsData: HowToElement[] = [
   {
     id: 1,

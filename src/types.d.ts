@@ -1,12 +1,17 @@
-type PlaylistItemType = {
+interface Playlist {
   id: string;
   name: string;
   ownerDisplayName: string;
-  webPlayerUrl: string;
+  href: string;
   coverImageUrl: string;
+  webPlayerUrl: string;
   isPublic: boolean;
   snapshotId: string;
   tracksCount: number;
-};
+}
 
-export default PlaylistItemType;
+interface HowToElement {
+  id: number;
+  heading: string;
+  content?: string;
+}

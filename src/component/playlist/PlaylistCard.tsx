@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, ButtonGroup, Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import PlaylistItemType from './PlaylistItemType';
 
 const useStyles = makeStyles((theme) => ({
   cardRoot: {
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PlaylistCard(props: { playlistItem: PlaylistItemType }): JSX.Element {
+export default function PlaylistCard(props: { playlistItem: Playlist }): JSX.Element {
   const { playlistItem } = props;
   const classes = useStyles();
 
@@ -38,11 +37,11 @@ export default function PlaylistCard(props: { playlistItem: PlaylistItemType }):
         </Typography>
         <Typography variant="subtitle1">Songs: {playlistItem.tracksCount}</Typography>
         <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-          <Button onClick={() => alert('TODO: implement button')}>Show songs</Button>
+          <Button disabled>Show songs</Button> {/* TODO: implement button */}
           <Button component={Link} to={{ pathname: playlistItem.webPlayerUrl }} target="_blank">
             Go to Spotify Player
           </Button>
-          <Button onClick={() => alert('TODO: implement button')}>Randomize</Button>
+          <Button disabled>Randomize</Button> {/* TODO: implement button */}
         </ButtonGroup>
       </CardContent>
     </Card>

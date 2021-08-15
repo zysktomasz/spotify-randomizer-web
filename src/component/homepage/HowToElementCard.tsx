@@ -2,12 +2,6 @@ import React from 'react';
 import { Avatar, Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-export interface HowToElement {
-  id: number;
-  heading: string;
-  content?: string;
-}
-
 const useStyles = makeStyles((theme) => ({
   cardRoot: {
     textAlign: 'left',

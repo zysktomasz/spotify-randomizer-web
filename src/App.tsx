@@ -6,7 +6,7 @@ import Homepage from './component/homepage/Homepage';
 import Footer from './component/footer/Footer';
 import SuccessfulLoginHandler from './component/authentication/SuccessfulLoginHandler';
 import Routes from './common/route';
-import Playlists from './component/playlist/Playlists';
+import PlaylistsPanel from './component/playlist/PlaylistsPanel';
 
 function App(): JSX.Element {
   return (
@@ -18,7 +18,7 @@ function App(): JSX.Element {
             <SuccessfulLoginHandler />
           </Route>
           <Route path={Routes.PLAYLISTS}>
-            <Playlists />
+            <PlaylistsPanel />
           </Route>
           <Route path={Routes.HOME}>
             <Homepage />
