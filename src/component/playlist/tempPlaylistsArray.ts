@@ -1,0 +1,291 @@
+import PlaylistItemType from './PlaylistItemType';
+
+const tempPlaylistsArray: PlaylistItemType[] = [
+  {
+    id: '0rWzf03OW11pSFczGC7L7f',
+    name: '--work--chill--',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/0rWzf03OW11pSFczGC7L7f',
+    coverImageUrl: 'https://i.scdn.co/image/ab67616d0000b273daa661b9c4316ff2594908aa',
+    isPublic: true,
+    snapshotId: 'NCw5MWUxNGUxOWFhZTgzODEyYWQwZTAxNzJlMGI2NWRkYzEwNTEyYzZj',
+    tracksCount: 2,
+  },
+  {
+    id: '3QVoXx4NW9qZ0Qj4a5tDXi',
+    name: 'background wavez',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/3QVoXx4NW9qZ0Qj4a5tDXi',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273129f56c6c0cadcab36abfc70ab67616d0000b273496233af66c16e1ce1c41ecfab67616d0000b273532d3741ae1cbff5097007f5ab67616d0000b273f1ab21859f96ad5aa38276bf',
+    isPublic: true,
+    snapshotId: 'MTQsOGYyYzVkYzU5ODVhN2FkNDk2NTY2YzZmNjg3MzBhNjQ2MjI4Yzg1NQ==',
+    tracksCount: 12,
+  },
+  {
+    id: '6R8RyKPcflRuWvkXrIB5SS',
+    name: '_M_',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/6R8RyKPcflRuWvkXrIB5SS',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273216438c17612a8c1ebf15106ab67616d0000b27359852ecca4a38f88187d176bab67616d0000b2735a30c394c2a5e800e78cc612ab67616d0000b273e85523f0c78c2e648dd288e9',
+    isPublic: true,
+    snapshotId: 'MTYsYzRiMDM5ZTJkZTRjMmFiNTQyNGY3MjllZTg0YjFjZjg1OGUxOWZhNA==',
+    tracksCount: 14,
+  },
+  {
+    id: '3bX2cZltY9lXeqrH9mBKn9',
+    name: 'MMMMMATERIALZ',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/3bX2cZltY9lXeqrH9mBKn9',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27310abc6d4b5fbe7afba45704eab67616d0000b27343750c08d2327293cf5b0d03ab67616d0000b273715a9b97e3ba94a039de2006ab67616d0000b273b2562c68303c266e3843ceef',
+    isPublic: true,
+    snapshotId: 'MTAsMzNkODM4M2RkZmZmMzJjNWVlYzc2YTg3MmIxMTYwNWU1ZTVlYmEwOQ==',
+    tracksCount: 6,
+  },
+  {
+    id: '3WWdSZpmFaHVeKJjooqTbb',
+    name: '_PL_',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/3WWdSZpmFaHVeKJjooqTbb',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27329686144dd64a6f87091301fab67616d0000b27334b730aea3d1ea02a10e659eab67616d0000b2738166db74d2b66f3534f23f7dab67616d0000b273b144f545f0d4366c0227472f',
+    isPublic: true,
+    snapshotId: 'NixlOWI1NWQ3NjZkODM5MWRkNjQ5NzczNGZiZDE0NDljMTM5Nzg5OTcw',
+    tracksCount: 4,
+  },
+  {
+    id: '7z7oMLCWaDM1IGeOFexSBc',
+    name: '_dunno',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/7z7oMLCWaDM1IGeOFexSBc',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2730fe79710a023d9f359bbbcd2ab67616d0000b27336cd2e52d7970c6208958c07ab67616d0000b273c745ebb6960819ddd119ab85ab67616d0000b273c85c7c4b0e851a9fb91fcfb2',
+    isPublic: true,
+    snapshotId: 'ODIsNDcyMDQzYzAxZDc1ZDQ3YTNjNDUwMzQxYmFlMzc1MWI0MmI4NTI2OA==',
+    tracksCount: 78,
+  },
+  {
+    id: '0GLstZsDNWkQbQFSesssEc',
+    name: 'once_woahful',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/0GLstZsDNWkQbQFSesssEc',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273912cc8fe2e9a53d328757a41ab67616d0000b273e278024bcbf14126ab0c84d7ab67616d0000b273f7cb3686896df183372ce159ab67616d0000b273ff29074a037debd4a7a69834',
+    isPublic: true,
+    snapshotId: 'MjEsZTI3OTgxOWY3MDY5Yjg1NmFhMjZiODI4ZGMyOGQ3ZGU0ZmFmYWQ1MA==',
+    tracksCount: 19,
+  },
+  {
+    id: '3PqrtDuDxvmckYnuHOftQU',
+    name: '_instru|mental',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/3PqrtDuDxvmckYnuHOftQU',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27331cf84b55b54efea6d18153dab67616d0000b27396d973020ed9aa87c416044fab67616d0000b273e19bd3aa4554269972bbd031ab67616d0000b273ff29074a037debd4a7a69834',
+    isPublic: true,
+    snapshotId: 'NDQ2LGE1YTY3NTVhZTYwYzg5ZTZlYWRmNGI2YzA5NTJiY2Q1ZmUzYjQ0YjA=',
+    tracksCount: 35,
+  },
+  {
+    id: '6dflJNLQhEOrsvIRu3IQwe',
+    name: '_mr_rager',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/6dflJNLQhEOrsvIRu3IQwe',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2730905700f494c025d93b27a96ab67616d0000b2737662947b56f7e60f84d477ccab67616d0000b27389eeee3827c8315c973637bdab67616d0000b273f3e55e46c1e6f747380dd30c',
+    isPublic: true,
+    snapshotId: 'MzMsOTI0YWVlN2M4ZGQ3N2E5NjExOWFlZTkxZWI3Yzk4OGViY2Q5NGQ0Ng==',
+    tracksCount: 31,
+  },
+  {
+    id: '2PDFo5JMljqJxU8uy79djA',
+    name: '_sorta_sad',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/2PDFo5JMljqJxU8uy79djA',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2736a760642a56847027428cb61ab67616d0000b27378de8b28de36a74afc0348b5ab67616d0000b27386af3caee1b98617f5320e86ab67616d0000b273b7873c680671277489987d80',
+    isPublic: true,
+    snapshotId: 'MTA4LDk5YzVhZjc1YjJhNWJhMWYxNDVhYjFiOWUyMmU5ODliNDhmMjk0ZjE=',
+    tracksCount: 104,
+  },
+  {
+    id: '2xJoZIBRvBpqUKET6sxeXI',
+    name: '_soft_&_chill',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/2xJoZIBRvBpqUKET6sxeXI',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2731a1ba7785a4b91c8aee7a79cab67616d0000b273ac51f3f04f1584fe93d24f39ab67616d0000b273c89305eeb49551cb8d03f40fab67616d0000b273d653f88352c2da499146473f',
+    isPublic: true,
+    snapshotId: 'MTI2MixlMDY5NDVmNzYwYTIxZWMyYTY3YmY1Mzc2ZmZhZDZjMzgxMzZjZWU2',
+    tracksCount: 192,
+  },
+  {
+    id: '5r3DZZstlqXPHnTYS3nd6Z',
+    name: '_rapzy',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/5r3DZZstlqXPHnTYS3nd6Z',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27307e4ee97e3526c2d88a79f63ab67616d0000b2739f84f46d5f97a954ded6d079ab67616d0000b273b7873c680671277489987d80ab67616d0000b273cfc1557ceef122cd07591513',
+    isPublic: true,
+    snapshotId: 'NTgyLGEwODQxOGMwMDQ5YWYzZWE0NzRiNTZmNTA2YmE5Y2M2NDZhMWEyODY=',
+    tracksCount: 285,
+  },
+  {
+    id: '6w3nEw41MBtJU3wQsGEX58',
+    name: '_darkr',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/6w3nEw41MBtJU3wQsGEX58',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2730dd6c9ab493b3cdee92c03a7ab67616d0000b27370ea6a7940a1d5cb7c67586fab67616d0000b273b3359e18ef773cfa586304cfab67616d0000b273f7cb3686896df183372ce159',
+    isPublic: true,
+    snapshotId: 'MTksNmQ0OWNkNzFlMzgxYmMyOGI1ZjRkNzRhN2VkNjI3ODIwOGEyNjhkZQ==',
+    tracksCount: 12,
+  },
+  {
+    id: '2ZuXuDiibFIsutKz36CelO',
+    name: '_rocky',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/2ZuXuDiibFIsutKz36CelO',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273288b8595213e38d99b6f9d6cab67616d0000b2735b698f8846c63513c565a68fab67616d0000b2739b05f4ca6d767f9b0c0ba86cab67616d0000b273c6084929566743530de8c721',
+    isPublic: true,
+    snapshotId: 'MjEsNjFiNzc0YmI4NzdiMzYyNjBiYTEwMzJiMDIyYzg3YzE2M2JiNDZjNg==',
+    tracksCount: 18,
+  },
+  {
+    id: '6Q9O034jU9UvQgE2XZNi1D',
+    name: '_various_vibez',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/6Q9O034jU9UvQgE2XZNi1D',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27305a3c11cb2cb7c60d30316a3ab67616d0000b2731300b06b0e874077db4ffff0ab67616d0000b273182707901d5739e9734f6dd8ab67616d0000b273a6f9b3e9da34b27ea08ea9b0',
+    isPublic: true,
+    snapshotId: 'MTU1MSxkYzdjMWE0MTRhMDU1YmM2YTUxNGNlZGUwNjE4ZmExYjYxOTRhMmU4',
+    tracksCount: 300,
+  },
+  {
+    id: '23ZHY7DSt2fdE9FGVrE6tL',
+    name: 'znowu nowa',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/23ZHY7DSt2fdE9FGVrE6tL',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2730e93a51e4dd7fac55d8f468bab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b27348a95897fd91eb34032a93e3ab67616d0000b273dfbe0339ddb5d5bb033b0735',
+    isPublic: true,
+    snapshotId: 'MTMyLDM0MWQ1NmViNGRlYTQ3MDg1ZjE4ZGU0Nzk4MzM1M2NmOWU2NGViOWQ=',
+    tracksCount: 130,
+  },
+  {
+    id: '6g9SDtAaiVXr8sNRKn0agL',
+    name: 'Oznaczone gwiazdką',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/6g9SDtAaiVXr8sNRKn0agL',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27367ff87e2839c5c93bb6e6a6aab67616d0000b27380736a597e060c60c7170d99ab67616d0000b273842e732b778998eef17b405fab67616d0000b273d1e444d953a911d76316a8d6',
+    isPublic: true,
+    snapshotId: 'MywxOTg0MzAzYWY1MTE4ZGVkYWJlNmVhOGY3ODFlZjRjYjk5YWRiZTEz',
+    tracksCount: 18,
+  },
+  {
+    id: '093iXM23PTU7LKwqvnU8LT',
+    name: 'Moje utwory z Shazam',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/093iXM23PTU7LKwqvnU8LT',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27313ea9ad3563b7a2507b6c442ab67616d0000b273808c9711fcb1dfc6cb3d9ce1ab67616d0000b273b2592bea12d840fd096ef965ab67616d0000b273f9acc7bad7283b5438dd0847',
+    isPublic: true,
+    snapshotId: 'NDgsY2VhM2E5YjViMzQ1Y2JjOWFhNGQxZDI5Y2FmN2YxNjY4ZjBjNzNmMw==',
+    tracksCount: 66,
+  },
+  {
+    id: '09mEYNyvSCafK1tATmBxGr',
+    name: 'z_Pozytywne/zywe',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/09mEYNyvSCafK1tATmBxGr',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2732862376d1ab27a28b34547dfab67616d0000b273314fa55bc911debb1e27ec41ab67616d0000b27366742afa4b45dcc7ede5038eab67616d0000b273e6a945e3924ef353cf2e11c4',
+    isPublic: true,
+    snapshotId: 'MjksODFlMDcxYTBhMzQwYmIwZDZhOTUyNTI3NTQ5ODg5OTZjMDI2M2UzOA==',
+    tracksCount: 26,
+  },
+  {
+    id: '1hPIoRtqtiMsj2WJwrOhrm',
+    name: 'z_Chill/klimatyczne',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/1hPIoRtqtiMsj2WJwrOhrm',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27352895adab833519fc6a67068ab67616d0000b2736e9a4eb74c903acfea7bcd41ab67616d0000b2737ed350d9a27eb70d71be51d6ab67616d0000b27399220b35c84093ba85957487',
+    isPublic: true,
+    snapshotId: 'MTM4LDExNzQ4ZTEzMWYxNzYzZDFkYmUxZTY1NGJjMjI2MWQxN2RlNGJlOGM=',
+    tracksCount: 88,
+  },
+  {
+    id: '5naDL5SaBc16fjmOqGzY2V',
+    name: 'z_luzik/do pracy',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/5naDL5SaBc16fjmOqGzY2V',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2732cb3f40f7d4114236061f77fab67616d0000b273354a44f2516cea5e6c87af43ab67616d0000b27373b063d18cd9be91eb12284aab67616d0000b273e22ce077d8cb2d990aced237',
+    isPublic: true,
+    snapshotId: 'OTAsNTg4NjEwYWRlNGVhOTE4YjYzMGQyM2ZhYjFmYjBhM2E2YTI5MWM1MA==',
+    tracksCount: 88,
+  },
+  {
+    id: '5KjfOEnVGhEqOPvoDoyfoz',
+    name: 'z_rapsy',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/5KjfOEnVGhEqOPvoDoyfoz',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273839ed848f33ed6ccf0df27a1ab67616d0000b273caed626d0cb2f60220977db8ab67616d0000b273fce23dadb51975ebf2e9d75cab67616d0000b273fe170ef2d2ff17cab5e324b3',
+    isPublic: true,
+    snapshotId: 'NzgsM2I2YWM3MGM3OTI0YWNjYTcxODYxOWRhNGFmNjg4ZDZkNzcyYmU4NA==',
+    tracksCount: 76,
+  },
+  {
+    id: '2tOB9IJCrqXxVzwE2D9DiE',
+    name: 'z_chill rapsy',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/2tOB9IJCrqXxVzwE2D9DiE',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b273861ecd2783b33bde98760364ab67616d0000b273bdfe4efd674482cf5ac88c99ab67616d0000b273c38327dd42b9d2b4954dc759ab67616d0000b273c7ea04a9b455e3f68ef82550',
+    isPublic: true,
+    snapshotId: 'ODcsYTdlZmFhNmRlMDA0NzJlMmNmOTQyMGNkODdjMWRjZDFlNWI3N2YxYQ==',
+    tracksCount: 83,
+  },
+  {
+    id: '54MTsJQhYErg0yiz4rez1j',
+    name: 'z_klimatyczne',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/54MTsJQhYErg0yiz4rez1j',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27376b5a9fa13989564bf620434ab67616d0000b273e56e8c3ea076e1a619024166ab67616d0000b273f7ae51b20b3ffa211c406d71ab67616d0000b273f87b718aac7d1b938e8e9e40',
+    isPublic: true,
+    snapshotId: 'MTE5LGFmYmEzNTVjM2IyMDY4NjVjNTljYWRlNDI3MzRkODAzYzAyYTEwYTg=',
+    tracksCount: 116,
+  },
+  {
+    id: '2vJB6sqlDfSm1I6pfFDXUe',
+    name: 'z_Chill vol. 2',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/2vJB6sqlDfSm1I6pfFDXUe',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b2732ca555a328f278fc04be7747ab67616d0000b2737f62bd7cd6c465125c33e786ab67616d0000b2738c8d5428b693308705e7cacaab67616d0000b273afce4c9cd3313302c0a16ed1',
+    isPublic: true,
+    snapshotId: 'MTI3LDk4MjU1ZjM5YTQxZjI1MzMxNDE3Y2FkOWExM2ZiOGEyMGQ1NTkzNmU=',
+    tracksCount: 165,
+  },
+  {
+    id: '11mxLZLrjQDaWxUy7YH8xf',
+    name: 'z_xDD',
+    ownerDisplayName: 'pizzazjajkiem',
+    webPlayerUrl: 'https://open.spotify.com/playlist/11mxLZLrjQDaWxUy7YH8xf',
+    coverImageUrl:
+      'https://mosaic.scdn.co/640/ab67616d0000b27332287455ec39025738de317bab67616d0000b27366081408a44e4176f20bad86ab67616d0000b27392c508bc5a40ea588bcaed38ab67616d0000b273cd31723de0bf3c86431c2f90',
+    isPublic: true,
+    snapshotId: 'NjQ0LDk1NGRmNWZlMThjOTJlOGE2OWQ2OGQxNWUyZTliYzJmMzMxODVhNzY=',
+    tracksCount: 452,
+  },
+];
+
+export default tempPlaylistsArray;
