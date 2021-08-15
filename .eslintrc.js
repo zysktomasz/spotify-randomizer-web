@@ -29,12 +29,12 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
-    // 'linebreak-style': 'off',
-    // 'prettier/prettier': [
-    //     'error',
-    //     {
-    //         endOfLine: 'auto',
-    //     },
-    // ],
+    'linebreak-style': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
