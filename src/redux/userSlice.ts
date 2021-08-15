@@ -35,10 +35,14 @@ export const userSlice = createSlice({
       state.userDetails = userDetails;
       state.jwt = jwt;
     },
+    clearUserData: (state) => {
+      state.userDetails = initialState.userDetails;
+      state.jwt = initialState.jwt;
+    },
     /* eslint-disable no-param-reassign */
   },
 });
 
-export const { setUserData } = userSlice.actions;
+export const { setUserData, clearUserData } = userSlice.actions;
 
 export default userSlice.reducer;
