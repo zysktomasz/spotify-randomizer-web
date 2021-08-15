@@ -5,6 +5,8 @@ import Header from './component/header/Header';
 import Homepage from './component/homepage/Homepage';
 import Footer from './component/footer/Footer';
 import SuccessfulLoginHandler from './component/authentication/SuccessfulLoginHandler';
+import Routes from './common/route';
+import PlaylistsPanel from './component/playlist/PlaylistsPanel';
 
 function App(): JSX.Element {
   return (
@@ -12,10 +14,13 @@ function App(): JSX.Element {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/successfulLoginHandler">
+          <Route path={Routes.SUCCESSFUL_LOGIN_HANDLER}>
             <SuccessfulLoginHandler />
           </Route>
-          <Route path="/">
+          <Route path={Routes.PLAYLISTS}>
+            <PlaylistsPanel />
+          </Route>
+          <Route path={Routes.HOME}>
             <Homepage />
           </Route>
         </Switch>

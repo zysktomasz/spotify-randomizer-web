@@ -1,18 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import { Toolbar } from '@material-ui/core';
-import MenuButtons from './MenuButtons';
+import { Box, Toolbar } from '@material-ui/core';
 import Logo from './Logo';
+import HeaderUserPanel from './HeaderUserPanel';
+import HeaderNavigationMenu from './HeaderNavigationMenu';
 
 const useStyles = makeStyles((theme) => ({
   appbarHeader: {
     paddingLeft: theme.spacing(20),
     paddingRight: theme.spacing(20),
-  },
-  toolbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
   },
 }));
 
@@ -21,9 +18,12 @@ export default function Header(): JSX.Element {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className={classes.toolbar}>
-        <Logo />
-        <MenuButtons />
+      <Toolbar className="boxFlexElements">
+        <Box className="boxFlexElements">
+          <Logo />
+          <HeaderNavigationMenu />
+        </Box>
+        <HeaderUserPanel />
       </Toolbar>
     );
   };

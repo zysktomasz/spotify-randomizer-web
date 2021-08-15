@@ -3,6 +3,7 @@ import { Redirect, useLocation } from 'react-router-dom';
 import { getUserDataFromJwt, isValidJwt } from '../../common/jwtValidator';
 import { AuthenticatedUserPayload, setUserData } from '../../redux/userSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import Routes from '../../common/route';
 
 function SuccessfulLoginHandler(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -26,7 +27,7 @@ function SuccessfulLoginHandler(): JSX.Element {
     }
   });
 
-  return isValidJwt(userStateJwt) ? <Redirect to={{ pathname: '/' }} /> : <p>spinner here</p>;
+  return isValidJwt(userStateJwt) ? <Redirect to={{ pathname: Routes.HOME }} /> : <p>spinner here</p>;
 }
 
 export default SuccessfulLoginHandler;

@@ -3,6 +3,7 @@ import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks';
 import { clearUserData } from '../../redux/userSlice';
+import Routes from '../../common/route';
 
 export default function LogoutButton(): JSX.Element {
   const history = useHistory();
@@ -10,7 +11,7 @@ export default function LogoutButton(): JSX.Element {
 
   const signOut = () => {
     dispatch(clearUserData());
-    history.push('/');
+    history.push(Routes.HOME);
   };
 
   return (

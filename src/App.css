@@ -18,6 +18,11 @@
     size: 18px;
 }
 
+.boxFlexElements {
+    display: flex;
+    justify-content: space-between;
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;

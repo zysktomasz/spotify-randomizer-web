@@ -14,7 +14,7 @@ function getDecodedJwt(jwt: string): CustomJwtPayload | undefined {
   try {
     return jwtDecode<JwtPayload>(jwt);
   } catch (e) {
-    console.error('Unable to decode jwt', e);
+    // console.error('Unable to decode jwt', e);
     return undefined;
   }
 }
