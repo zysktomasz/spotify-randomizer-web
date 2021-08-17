@@ -20,8 +20,6 @@ export default function PlaylistsPanel(): JSX.Element {
   const userStateJwt = useAppSelector((state) => state.user.jwt);
 
   useEffect(() => {
-    console.log('PlaylistsPanel component useEffect()');
-
     // todo: add Authorization header in axios request interceptor
     // todo: extract to a file that will handle fe -> api calls
     setIsLoading(true);
@@ -30,11 +28,9 @@ export default function PlaylistsPanel(): JSX.Element {
       .then((response) => {
         const { data } = response;
         setPlaylists(data);
-        console.log('response', response);
         setIsLoading(false);
       })
-      .catch((error) => {
-        console.log('error', error);
+      .catch(() => {
         setIsLoading(false);
       });
   }, [setPlaylists, userStateJwt]); // why tho
