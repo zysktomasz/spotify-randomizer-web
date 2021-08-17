@@ -3,6 +3,7 @@ import { Box, Button, ButtonGroup, Card, CardContent, CardMedia, Collapse, Typog
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import TracksPanel from '../track/TracksPanel';
+import ReorderTracksPanel from '../track/ReorderTracksPanel';
 
 const useStyles = makeStyles((theme) => ({
   cardRoot: {
@@ -34,13 +35,23 @@ export default function PlaylistCard(props: { playlistItem: Playlist }): JSX.Ele
   const classes = useStyles();
   const { playlistItem } = props;
 
-  const [expanded, setExpanded] = useState(false);
+  const [songsExpanded, setSongsExpanded] = useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
+    setSongsExpanded(!songsExpanded);
   };
 
-  const showSongsButton = <Button onClick={handleExpandClick}>{!expanded ? 'Show songs' : 'Hide songs'}</Button>;
+  const handleHideExpandedSongs = () => {
+    if (songsExpanded) {
+      setSongsExpanded(false);
+    }
+  };
+
+  const handleShowExpandedSongs = () => {
+    setSongsExpanded(true);
+  };
+
+  const showSongsButtonText = !songsExpanded ? 'Show songs' : 'Hide songs';
 
   return (
     <Card key={playlistItem.id} className={classes.cardRoot} variant="outlined">
@@ -52,15 +63,20 @@ export default function PlaylistCard(props: { playlistItem: Playlist }): JSX.Ele
           </Typography>
           <Typography variant="subtitle1">Songs: {playlistItem.tracksCount}</Typography>
           <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-            {showSongsButton}
+            <Button onClick={handleExpandClick}>{showSongsButtonText}</Button>
             <Button component={Link} to={{ pathname: playlistItem.webPlayerUrl }} target="_blank">
               Go to Spotify Player
             </Button>
-            <Button disabled>Randomize</Button> {/* TODO: implement button */}
+            <ReorderTracksPanel
+              playlistId={playlistItem.id}
+              playlistName={playlistItem.name}
+              handleHideExpandedSongs={handleHideExpandedSongs}
+              handleShowExpandedSongs={handleShowExpandedSongs}
+            />
           </ButtonGroup>
         </CardContent>
       </Box>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={songsExpanded} timeout="auto" unmountOnExit>
         <TracksPanel playlistId={playlistItem.id} />
       </Collapse>
     </Card>
