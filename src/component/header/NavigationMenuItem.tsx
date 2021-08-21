@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
 export type NavigationMenuItemProps = {
   name: string;
   href: string;
+  onlyForAuthenticated: boolean;
 };
 
 export default function NavigationMenuItem(props: { item: NavigationMenuItemProps }): JSX.Element {

@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Header(): JSX.Element {
   const classes = useStyles();
 
+  // todo add menu display for mobile
   const displayDesktop = () => {
     return (
       <Toolbar className="boxFlexElements">
