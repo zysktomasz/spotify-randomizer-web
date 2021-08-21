@@ -8,13 +8,13 @@ interface CustomJwtPayload {
   sub?: string;
   displayName?: string;
   accessToken?: string;
+  exp?: number;
 }
 
 function getDecodedJwt(jwt: string): CustomJwtPayload | undefined {
   try {
     return jwtDecode<JwtPayload>(jwt);
   } catch (e) {
-    // console.error('Unable to decode jwt', e);
     return undefined;
   }
 }
@@ -32,6 +32,31 @@ export function isValidJwt(jwt: string | undefined): boolean {
 
   // todo: extend jwt validation
   return decodedJwt.iss === ISSUER;
+}
+
+function jwtExpirationAndCurrentTimestampDifference(jwt: string) {
+  try {
+    const decodedJwt = getDecodedJwt(jwt);
+    if (decodedJwt === undefined || decodedJwt?.exp === undefined) {
+      return -1; // negative means that it's expired
+    }
+
+    const expirationTimestamp = decodedJwt.exp;
+    const currentTimestamp = Math.round(new Date().getTime() / 1000);
+
+    console.log('expirationTimestamp', expirationTimestamp);
+    console.log('currentTimestamp', currentTimestamp);
+
+    return expirationTimestamp - currentTimestamp;
+  } catch {
+    return -1;
+  }
+}
+
+export function isJwtExpired(jwt: string): boolean {
+  const number = jwtExpirationAndCurrentTimestampDifference(jwt);
+  console.log('difference: ', number);
+  return number <= 0;
 }
 
 export function getUserDataFromJwt(jwt: string): UserDetails | undefined {

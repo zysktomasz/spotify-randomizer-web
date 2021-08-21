@@ -20,12 +20,11 @@ export default function HeaderNavigationMenu(): JSX.Element {
 
   return (
     <Box style={{ marginLeft: '50px' }}>
-      {menuItems.map((item) => {
-        if (item.onlyForAuthenticated && !isLoggedIn) {
-          return <></>;
-        }
-        return <NavigationMenuItem key={item.name} item={item} />;
-      })}
+      {menuItems
+        .filter((item) => !item.onlyForAuthenticated || (item.onlyForAuthenticated && isLoggedIn))
+        .map((item) => (
+          <NavigationMenuItem key={item.name} item={item} />
+        ))}
     </Box>
   );
 }
