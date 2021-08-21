@@ -27,7 +27,7 @@ function SuccessfulLoginHandler(): JSX.Element {
     }
   });
 
-  return isValidJwt(userStateJwt) ? <Redirect to={{ pathname: Routes.HOME }} /> : <p>spinner here</p>;
+  return isValidJwt(userStateJwt) ? <Redirect to={{ pathname: Routes.PLAYLISTS }} /> : <p>spinner here</p>;
 }
 
 export default SuccessfulLoginHandler;
