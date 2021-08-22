@@ -44,9 +44,6 @@ function jwtExpirationAndCurrentTimestampDifference(jwt: string) {
     const expirationTimestamp = decodedJwt.exp;
     const currentTimestamp = Math.round(new Date().getTime() / 1000);
 
-    console.log('expirationTimestamp', expirationTimestamp);
-    console.log('currentTimestamp', currentTimestamp);
-
     return expirationTimestamp - currentTimestamp;
   } catch {
     return -1;
@@ -55,7 +52,6 @@ function jwtExpirationAndCurrentTimestampDifference(jwt: string) {
 
 export function isJwtExpired(jwt: string): boolean {
   const number = jwtExpirationAndCurrentTimestampDifference(jwt);
-  console.log('difference: ', number);
   return number <= 0;
 }
 
