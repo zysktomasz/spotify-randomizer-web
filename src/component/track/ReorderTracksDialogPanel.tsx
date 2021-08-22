@@ -4,7 +4,7 @@ import axios from 'axios';
 import { BACKEND_URL } from '../../common/constant';
 import { useAppSelector } from '../../redux/hooks';
 
-export default function ReorderTracksPanel(props: {
+export default function ReorderTracksDialogPanel(props: {
   playlistId: string;
   playlistName: string;
   handleHideExpandedSongs: () => void;
@@ -54,17 +54,19 @@ export default function ReorderTracksPanel(props: {
       <Dialog open={open} onClose={handleClose} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
         <DialogTitle id="alert-dialog-title">Do you want to reorder tracks in {playlistName} playlist?</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            SpotifyRandomizer will reorder tracks in your playlist. It will not affect &apos;date added&apos; property of any
-            song. Unfortunately this process can only be done one song at a time so it might take a few minutes.
+          <DialogContentText id="alert-dialog-description" style={{ whiteSpace: 'pre-line' }}>
+            {`SpotifyRandomizer will reorder tracks in your playlist. It will not affect &apos;date added&apos; property of any
+            song.
+            This process can only be done one song at a time so if there are a lot of songs in a playlist it might take a few minutes.
+            `}
           </DialogContentText>
           <DialogContentText id="alert-dialog-description-2">{isLoading && <span>Reordering...</span>}</DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button disabled={isLoading} onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleReorderTracks} color="primary" autoFocus>
+          <Button disabled={isLoading} onClick={handleReorderTracks} color="primary" autoFocus>
             Reorder
           </Button>
         </DialogActions>

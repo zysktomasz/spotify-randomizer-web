@@ -3,7 +3,7 @@ import { Box, Button, ButtonGroup, Card, CardContent, CardMedia, Collapse, Typog
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import TracksPanel from '../track/TracksPanel';
-import ReorderTracksPanel from '../track/ReorderTracksPanel';
+import ReorderTracksDialogPanel from '../track/ReorderTracksDialogPanel';
 
 const useStyles = makeStyles((theme) => ({
   cardRoot: {
@@ -67,7 +67,7 @@ export default function PlaylistCard(props: { playlistItem: Playlist }): JSX.Ele
             <Button component={Link} to={{ pathname: playlistItem.webPlayerUrl }} target="_blank">
               Go to Spotify Player
             </Button>
-            <ReorderTracksPanel
+            <ReorderTracksDialogPanel
               playlistId={playlistItem.id}
               playlistName={playlistItem.name}
               handleHideExpandedSongs={handleHideExpandedSongs}
