@@ -1,4 +1,58 @@
-## How to deploy application to AWS S3
+Link to website: [spotifyrandomizer.zysk.it](https://spotifyrandomizer.zysk.it)
+
+Link to consumed REST API
+repository: [github.com/zysktomasz/spotify-randomizer](https://github.com/zysktomasz/spotify-randomizer)
+
+### Showcase
+
+#### Main page
+
+<a href="https://i.imgur.com/gyA4Ypa.png"><img src="https://i.imgur.com/gyA4Ypa.png" alt="drawing" width="900"/></a>
+
+#### Playlists list
+
+<a href="https://i.imgur.com/5LE9CQh.png"><img src="https://i.imgur.com/5LE9CQh.png" alt="drawing" width="900"/></a>
+
+#### Tracks list
+
+<a href="https://i.imgur.com/05GHyV2.png"><img src="https://i.imgur.com/05GHyV2.png" alt="drawing" width="900"/></a>
+
+#### Reorder tracks dialog panel
+
+<a href="https://i.imgur.com/0rlKvrZ.png"><img src="https://i.imgur.com/0rlKvrZ.png" alt="drawing" width="900"/></a>
+
+### Technologies used
+
+- React with Typescript
+- [Material-UI](https://material-ui.com/) - Material Design framework
+- [Redux](https://redux.js.org/) - state management
+- [Axios](https://github.com/axios/axios) - HTTP communication
+  with [SpotifyRandomizer backend](https://github.com/zysktomasz/spotify-randomizer)
+- [ESLint](https://eslint.org/) - linter
+- [Prettier](https://prettier.io/) - code formatting
+
+### Architecture
+
+#### Use of REST API
+
+This project is React SPA consuming REST API
+of [SpotifyRandomizer backend](https://github.com/zysktomasz/spotify-randomizer) project. All communication between
+client and Spotify API is made through that backend project.
+
+Calls to API are made with [Axios](https://github.com/axios/axios).
+
+#### State
+
+SPA uses [Redux](https://redux.js.org/) to store state - essentially only details of authenticated user are stored. This
+state is also saved to and loaded from _localStorage_.
+
+#### Deployment
+
+Built application is deployed and stored on AWS [S3 bucket](https://aws.amazon.com/s3/) that is configured to host a
+static website. Website can be visited by going to [spotifyrandomizer.zysk.it](https://spotifyrandomizer.zysk.it). It is
+cached and served to users by [Cloudfront](https://aws.amazon.com/cloudfront/)
+
+## How to build and deploy application to AWS S3
 
 1. Remember to first build application
 
@@ -7,60 +61,7 @@
 
    `aws s3 sync build/ s3://spotifyrandomizer.zysk.it --acl public-read`
 3. Since Cloudfront distributions loads and caches S3 files in Edge locations you'll have to trigger refreshing them. It
-   can be done be starting Invalidation in your Cloudfront distribution.
+   can be done by starting 'Invalidation' for your Cloudfront distribution.
 
    `aws cloudfront create-invalidation --distribution-id E1ZIWLF7GHAA3Q --paths '/*'`
 
-# Getting Started with Create React App
-
-with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
-information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will
-remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right
-into your project so you have full control over them. All of the commands except `eject` will still work, but they will
-point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you
-shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in
-the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
