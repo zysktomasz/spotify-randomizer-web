@@ -2,15 +2,13 @@ const howToElementsData: HowToElement[] = [
   {
     id: 1,
     heading: 'You login to SpotifyRandomizer through your Spotify account',
-    content:
-      'You will be asked to allow SpotifyRandomizer certain permissions on your account. \n' +
-      'These are for: reading your profile data, reading your playlists (public and private), modifying your playlists (in order to\n' +
-      'reorder songs).\n',
+    content: `You will be asked to allow SpotifyRandomizer certain permissions on your account.
+      These are for: reading your profile data, reading your playlists (public and private), modifying your playlists (in order to reorder songs).`,
   },
   {
     id: 2,
-    heading: 'SpotifyRandomizer shows list of your playlists',
-    content: 'Both public & private. Along with playlist image & added songs count.',
+    heading: 'SpotifyRandomizer shows list of your playlists and tracks',
+    content: 'Both public and private. Along with playlist image, added songs count and list of Tracks in each playlist.',
   },
   {
     id: 3,
@@ -20,7 +18,8 @@ const howToElementsData: HowToElement[] = [
   {
     id: 4,
     heading: 'SpotifyRandomizer reorganizes songs in your playlist in random order',
-    content: "Songs will be rearranged, but their 'added date' will not change.",
+    content:
+      "Songs will be rearranged in random order. Their 'added date' will not change - so you will also be able to sort them in order you added them originally.",
   },
 ];
 

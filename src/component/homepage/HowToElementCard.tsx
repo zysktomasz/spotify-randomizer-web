@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: 'green',
   },
+  content: {
+    whiteSpace: 'pre-line',
+  },
 }));
 
 function HowToElementCard(props: { element: HowToElement }): JSX.Element {
@@ -29,7 +32,7 @@ function HowToElementCard(props: { element: HowToElement }): JSX.Element {
         title={heading}
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.content}>
           {content}
         </Typography>
       </CardContent>

@@ -34,11 +34,10 @@ export default function TracksPanel(props: { playlistId: string }): JSX.Element 
       .catch(() => {
         setIsLoading(false);
       });
-  }, [playlistId, setTracks, userStateJwt]); // why tho
+  }, [playlistId, setTracks, userStateJwt]);
 
   return (
     <>
-      <h2>Tracks for playlist id: {playlistId}</h2>
       {isLoading && <h2>Loading tracks...</h2>}
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
