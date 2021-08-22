@@ -14,13 +14,13 @@ function SocialMediaLinks(): JSX.Element {
 
   return (
     <>
-      <IconButton href="https://www.linkedin.com/in/tomasz-zysk/">
+      <IconButton target="_blank" href="https://www.linkedin.com/in/tomasz-zysk/">
         <FaLinkedin className={classes.iconButtonLink} />
       </IconButton>
-      <IconButton href="https://github.com/zysktomasz">
+      <IconButton target="_blank" href="https://github.com/zysktomasz">
         <FaGithub className={classes.iconButtonLink} />
       </IconButton>
-      <IconButton href="http://zysk.it">
+      <IconButton target="_blank" href="https://zysk.it">
         <FaGlobe className={classes.iconButtonLink} />
       </IconButton>
     </>
